@@ -12,10 +12,7 @@ a Discord BOT with User friendly commands, moderation commands and more!
     
 - handler/index.js
   - replace yourDiscordServerID with your discord server ID
-<br>
-
-### Important: The Bot needs to be in the server!
-
+  - Important: The Bot needs to be in the server!
 <br>
 
 - npm i (download all libraries)
