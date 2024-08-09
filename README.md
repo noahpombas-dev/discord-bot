@@ -1,4 +1,4 @@
-# User Friendly Discord BOT
+# User Friendly Discord BOT - WiP
 a Discord BOT with User friendly commands, moderation commands and more! 
 
 ### It's not 100% finished yet!
