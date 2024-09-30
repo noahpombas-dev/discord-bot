@@ -11,4 +11,4 @@ client.slash = new Discord.Collection();
 handler.loadEvents(client);
 handler.loadSlashCommands(client);
 
-client.login(process.env.TOKEN);
+client.login(process.env.token);

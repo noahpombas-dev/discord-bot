@@ -48,20 +48,23 @@ module.exports = {
                 .setColor("Green")
                 .setFooter({ text: `Member moved: ${member.user.username}`, iconURL: member.user.displayAvatarURL() })
                 .setTimestamp()
-                .setURL(`https://discord.com/channels/${interaction.guild.id}/${canalV.id}`)
                 .setTitle("🧹 - Member Moved!")
                 .setThumbnail(interaction.guild.iconURL({ dynamic: true, extension: 'png' }))
-                .setDescription("*✅ - Member moved successfully!*")
                 .setFields(
                     {
                         name: "🎙 - Voice Channel:",
-                        value: `*${canalV}*`,
+                        value: `*${channel}*`,
                         inline: true
                     },
                     {
                         name: "🆔 - Voice Chanel ID:",
-                        value: `*${canalV.id}*`,
+                        value: `*${channel.id}*`,
                         inline: true
+                    },
+                    {
+                        name: " ",
+                        value: ` `,
+                        inline: false
                     },
                     {
                         name: "👤 - Moved Member:",
@@ -78,8 +81,8 @@ module.exports = {
             await interaction.editReply({ embeds: [embedVoice] })
             member.voice.setChannel(channel)
 
-        } catch {
-            interaction.editReply({ content: `**Error: Something didn't work...**`, ephemeral: true })
+        } catch (err) {
+            interaction.editReply({ content: `**Error: Something didn't work...** ${err}`, ephemeral: true })
         }
 
 

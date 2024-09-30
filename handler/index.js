@@ -54,7 +54,7 @@ const loadSlashCommands = async function (client) {
     }
 
     client.on("ready", async () => {
-        await client.guilds.cache.get("yourDiscordServerID").commands.set(slash);
+        await client.guilds.cache.get("serverid").commands.set(slash);
     })
 }
 
