@@ -1,4 +1,4 @@
-# 🤖 User-Friendly Discord Bot
+# 🤖 User-Friendly Discord Bot - Working in Progress
 
 Welcome to the **User-Friendly Discord Bot**! 🌟
 
