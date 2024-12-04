@@ -28,7 +28,7 @@ On this GitHub, you'll find a collection of my projects, experiments, and contri
 
 When I'm not coding, you can find me exploring the outdoors, playing video games, or experimenting with new tech gadgets.
 
-Feel free to check out my projects, provide feedback, or connect with me at [noahpombas.ch](https://noahpombas.ch). I'm excited to be part of the coding community and can't wait to see where this journey takes me!
+Feel free to check out my projects, provide feedback, or connect with me at [portfolio.noahpombas.ch](https://portfolio.noahpombas.ch). I'm excited to be part of the coding community and can't wait to see where this journey takes me!
 
 🚀 Let’s build something amazing together!
 
