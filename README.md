@@ -35,7 +35,7 @@ Feel free to check out my projects, provide feedback, or connect with me at [por
 ## 🔗 Links
 [![Check it out](https://img.shields.io/badge/Visit-Bot_Repo-blue?style=for-the-badge)](https://github.com/noahpombas-dev/discord-bot)
 
-[![Portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://noahpombas.ch/)
+[![Portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://portfolio.noahpombas.ch/)
 
 ## Support
 Need help? Send an email to [info@noahpombas.ch](mailto:info@noahpombas.ch).
