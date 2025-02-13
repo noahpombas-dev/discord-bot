@@ -1,7 +1,7 @@
 const fs = require("node:fs");
 const chalk = require("chalk");
 
-//Carregar eventos
+// Load Events
 const loadEvents = async function (client) {
     const eventFolders = fs.readdirSync("./events");
     for (const folder of eventFolders) {
@@ -12,14 +12,14 @@ const loadEvents = async function (client) {
         for (const file of eventFiles) {
             const event = require(`../events/${folder}/${file}`);
 
-            if (event.name) {
-                console.log(chalk.greenBright(` ✔️  => ${file} Event loaded.`));
+            if(event.name) {
+                console.log(chalk.greenBright(`✅ => ${file} Event loaded.`));
             } else {
-                console.log(chalk.redBright(` ❌  => ${file} Event not loaded.`));
+                console.log(chalk.redBright(`❌ => ${file} Event not loaded.`))
                 continue;
             }
 
-            if (event.once) {
+            if(event.once) {
                 client.once(event.name, (...args) => event.execute(...args, client));
             } else {
                 client.on(event.name, (...args) => event.execute(...args, client));
@@ -28,12 +28,11 @@ const loadEvents = async function (client) {
     }
 }
 
-
-//Carregar slashcommands
+// Load Slashcommands
 const loadSlashCommands = async function (client) {
-    let slash = []
+    let slash = [];
 
-    const commandFolders = fs.readdirSync("./commands");
+    const commandFolders = fs.readdirSync("./commands")
     for (const folder of commandFolders) {
         const commandFiles = fs
             .readdirSync(`./commands/${folder}`)
@@ -42,19 +41,20 @@ const loadSlashCommands = async function (client) {
         for (const file of commandFiles) {
             const command = require(`../commands/${folder}/${file}`);
 
-            if (command.name) {
+            if(command.name) {
                 client.slash.set(command.name, command);
-                slash.push(command)
-                console.log(chalk.greenBright(` ✔️  => ${file} Command loaded`));
+                slash.push(command);
+                console.log(chalk.greenBright(`✅ => ${file} Slashcommand loaded.`))
             } else {
-                console.log(chalk.redBright(` ❌  => ${file} Command not loaded`));
+                console.log(chalk.redBright(`❌ => ${file} Slashcommand not loaded.`))
                 continue;
             }
+
         }
     }
 
     client.on("ready", async () => {
-        await client.guilds.cache.get("serverid").commands.set(slash);
+        await client.application.commands.set(slash);
     })
 }
 

@@ -1,32 +1,15 @@
-const client = require("../../index");
-const { ActivityType } = require('discord.js')
-const chalk = require("chalk");
-const { joinVoiceChannel } = require("@discordjs/voice");
-const Discord = require('discord.js')
+const Discord = require('discord.js');
+const chalk = require('chalk');
 
 module.exports = {
-  name: 'ready',
-  once: true,
-
-  /**
-   * @param {Client} client 
-   */
-  async execute(client) {
-
-    let status = [
-      `by info@noahpombas.ch`,
-      `Spoiler: novo Servidor de Minecraft brevemente`
-    ],
-      i = 0
-    setInterval(() => {
-      client.user.setActivity(`${status[i++ % status.length]}`, {
-        type: ActivityType.Streaming
-      })
-    }, 5000);
+    name: 'ready',
+    once: true,
+    /** @param {Client} client */
+    async execute(client) {
+        client.setMaxListeners(0);
 
 
 
-    
-    console.log(chalk.blueBright(`[READY] Bot Online!`));
-  }
+        console.log(chalk.blueBright(`${client.user.username} is Online and inside ${client.guilds.cache.size} servers!`));
+    }
 }
