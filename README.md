@@ -7,8 +7,6 @@ This bot is designed to enhance your Discord experience with easy-to-use command
 ### ✨ Features
 - **🛠️ Moderation Commands:** Tools to help manage your server effectively.
 - **👥 User-Friendly Commands:** Simple and intuitive commands for all users.
-- **🔔 Custom Notifications:** Set reminders and alerts for important events.
-- **🎨 Customizable Settings:** Tailor the bot's behavior to fit your server's needs.
 
 ### 💻 Technologies
 - **Node.js:** The backbone of the bot, providing a robust runtime environment.
